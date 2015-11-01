@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		28388C5E1BE692C9004FC392 /* vulnerable_space.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vulnerable_space.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28388C5E1BE692C9004FC392 /* vulnerable_spaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vulnerable_spaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28388C611BE692C9004FC392 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28388C631BE692C9004FC392 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		28388C661BE692C9004FC392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		28388C5F1BE692C9004FC392 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				28388C5E1BE692C9004FC392 /* vulnerable_space.app */,
+				28388C5E1BE692C9004FC392 /* vulnerable_spaces.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,9 +67,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		28388C5D1BE692C9004FC392 /* vulnerable_space */ = {
+		28388C5D1BE692C9004FC392 /* vulnerable_spaces */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 28388C701BE692C9004FC392 /* Build configuration list for PBXNativeTarget "vulnerable_space" */;
+			buildConfigurationList = 28388C701BE692C9004FC392 /* Build configuration list for PBXNativeTarget "vulnerable_spaces" */;
 			buildPhases = (
 				28388C5A1BE692C9004FC392 /* Sources */,
 				28388C5B1BE692C9004FC392 /* Frameworks */,
@@ -79,9 +79,9 @@
 			);
 			dependencies = (
 			);
-			name = vulnerable_space;
+			name = vulnerable_spaces;
 			productName = vulnerable_space;
-			productReference = 28388C5E1BE692C9004FC392 /* vulnerable_space.app */;
+			productReference = 28388C5E1BE692C9004FC392 /* vulnerable_spaces.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +99,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 28388C591BE692C9004FC392 /* Build configuration list for PBXProject "vulnerable_space" */;
+			buildConfigurationList = 28388C591BE692C9004FC392 /* Build configuration list for PBXProject "vulnerable_spaces" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -112,7 +112,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				28388C5D1BE692C9004FC392 /* vulnerable_space */,
+				28388C5D1BE692C9004FC392 /* vulnerable_spaces */,
 			);
 		};
 /* End PBXProject section */
@@ -250,8 +250,8 @@
 				INFOPLIST_FILE = vulnerable_space/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.vcplusplus.vulnerable-space";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.vcplusplus.vulnerable-spaces";
+				PRODUCT_NAME = vulnerable_spaces;
 			};
 			name = Debug;
 		};
@@ -262,15 +262,15 @@
 				INFOPLIST_FILE = vulnerable_space/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.vcplusplus.vulnerable-space";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.vcplusplus.vulnerable-spaces";
+				PRODUCT_NAME = vulnerable_spaces;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		28388C591BE692C9004FC392 /* Build configuration list for PBXProject "vulnerable_space" */ = {
+		28388C591BE692C9004FC392 /* Build configuration list for PBXProject "vulnerable_spaces" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28388C6E1BE692C9004FC392 /* Debug */,
@@ -279,7 +279,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		28388C701BE692C9004FC392 /* Build configuration list for PBXNativeTarget "vulnerable_space" */ = {
+		28388C701BE692C9004FC392 /* Build configuration list for PBXNativeTarget "vulnerable_spaces" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28388C711BE692C9004FC392 /* Debug */,
