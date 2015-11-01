@@ -6,16 +6,19 @@
 //  Copyright © 2015 VC++. All rights reserved.
 //
 
-import Foundation
+#import <Parse/PFObject+Subclass.h>
 
-public struct Location {
+class Location : PFObject, PFSubclassing {
     
-    var longitude: Int
-    var latitude: Int
+    @NSManaged var longitude: Int
+    @NSManaged var latitude: Int
     
-    public init(longitude: Int, latitude: Int) {
+    override class func initialize(longitude: Int, latitude: Int) {
         self.longitude = longitude
         self.latitude = latitude
     }
     
+    static func parseClassName() -> String {
+        return "Location"
+    }
 }
