@@ -41,7 +41,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="6Hq-pz-3QM">
                         <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" image="filter" id="Y8r-sI-zD8">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" id="Y8r-sI-zD8">
                             <connections>
                                 <segue destination="gRK-9k-5jK" kind="presentation" identifier="Types Segue" id="Glz-Sc-CwV"/>
                             </connections>
@@ -145,7 +145,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="filter" width="25" height="25"/>
         <image name="icon_me" width="30" height="55"/>
     </resources>
 </document>
