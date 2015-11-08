@@ -13,7 +13,6 @@
 		29B002979531B0D822435B0B /* Pods_vulnerable_spaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C4642DC8BDD4E01BBEA9E8 /* Pods_vulnerable_spaces.framework */; };
 		EB8A18791BEFDB9300F004B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB8A18781BEFDB9300F004B8 /* Main.storyboard */; };
 		EB8A187F1BEFDD7E00F004B8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8A187E1BEFDD7E00F004B8 /* MapViewController.swift */; };
-		EB8A18811BEFDDE600F004B8 /* TypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8A18801BEFDDE600F004B8 /* TypesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		EB8A18751BEFDAF500F004B8 /* vulnerable_spaces-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vulnerable_spaces-Bridging-Header.h"; sourceTree = "<group>"; };
 		EB8A18781BEFDB9300F004B8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EB8A187E1BEFDD7E00F004B8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		EB8A18801BEFDDE600F004B8 /* TypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesTableViewController.swift; sourceTree = "<group>"; };
 		ECF6F1F10245898FCC28C353 /* Pods-vulnerable_spaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vulnerable_spaces.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vulnerable_spaces/Pods-vulnerable_spaces.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,7 +64,6 @@
 			children = (
 				28388C611BE692C9004FC392 /* AppDelegate.swift */,
 				EB8A187E1BEFDD7E00F004B8 /* MapViewController.swift */,
-				EB8A18801BEFDDE600F004B8 /* TypesTableViewController.swift */,
 				EB8A18781BEFDB9300F004B8 /* Main.storyboard */,
 				28388C681BE692C9004FC392 /* Assets.xcassets */,
 				28388C6A1BE692C9004FC392 /* LaunchScreen.storyboard */,
@@ -217,7 +214,6 @@
 			files = (
 				EB8A187F1BEFDD7E00F004B8 /* MapViewController.swift in Sources */,
 				28388C621BE692C9004FC392 /* AppDelegate.swift in Sources */,
-				EB8A18811BEFDDE600F004B8 /* TypesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

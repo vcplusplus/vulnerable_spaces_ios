@@ -41,14 +41,6 @@ class MapViewController: UIViewController {
     locationManager.requestWhenInUseAuthorization()
   }
   
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    if segue.identifier == "Types Segue" {
-      let navigationController = segue.destinationViewController as! UINavigationController
-      let controller = navigationController.topViewController as! TypesTableViewController
-      controller.selectedTypes = searchedTypes
-      controller.delegate = self
-    }
-  }
 }
 
 // MARK: - CLLocationManagerDelegate
@@ -81,14 +73,4 @@ extension MapViewController: CLLocationManagerDelegate {
     
   }
 }
-
-
-// MARK: - TypesTableViewControllerDelegate
-extension MapViewController: TypesTableViewControllerDelegate {
-  func typesController(controller: TypesTableViewController, didSelectTypes types: [String]) {
-    searchedTypes = controller.selectedTypes.sort()
-    dismissViewControllerAnimated(true, completion: nil)
-  }
   
-  
-}
