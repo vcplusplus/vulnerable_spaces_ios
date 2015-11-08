@@ -11,9 +11,9 @@
 		28388C691BE692C9004FC392 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28388C681BE692C9004FC392 /* Assets.xcassets */; };
 		28388C6C1BE692C9004FC392 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28388C6A1BE692C9004FC392 /* LaunchScreen.storyboard */; };
 		29B002979531B0D822435B0B /* Pods_vulnerable_spaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C4642DC8BDD4E01BBEA9E8 /* Pods_vulnerable_spaces.framework */; };
+		5E5EE4CA1BE6983B008768C9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5EE4C91BE6983B008768C9 /* Location.swift */; };
 		EB8A18791BEFDB9300F004B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB8A18781BEFDB9300F004B8 /* Main.storyboard */; };
 		EB8A187F1BEFDD7E00F004B8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8A187E1BEFDD7E00F004B8 /* MapViewController.swift */; };
-		5E5EE4CA1BE6983B008768C9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5EE4C91BE6983B008768C9 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,6 @@
 		5E5EE4CB1BE6A7B9008768C9 /* Vulnerable-Spaces-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Vulnerable-Spaces-Bridging-Header.h"; sourceTree = "<group>"; };
 		90C4642DC8BDD4E01BBEA9E8 /* Pods_vulnerable_spaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vulnerable_spaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F99276E5E897026E4601A6 /* Pods-vulnerable_spaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vulnerable_spaces.release.xcconfig"; path = "Pods/Target Support Files/Pods-vulnerable_spaces/Pods-vulnerable_spaces.release.xcconfig"; sourceTree = "<group>"; };
-		EB8A18751BEFDAF500F004B8 /* vulnerable_spaces-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vulnerable_spaces-Bridging-Header.h"; sourceTree = "<group>"; };
 		EB8A18781BEFDB9300F004B8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EB8A187E1BEFDD7E00F004B8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		ECF6F1F10245898FCC28C353 /* Pods-vulnerable_spaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vulnerable_spaces.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vulnerable_spaces/Pods-vulnerable_spaces.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +128,7 @@
 				TargetAttributes = {
 					28388C5D1BE692C9004FC392 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 63H5SAKBK2;
 					};
 				};
 			};
@@ -217,7 +217,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB8A187F1BEFDD7E00F004B8 /* MapViewController.swift in Sources */,
-				28388C641BE692C9004FC392 /* ViewController.swift in Sources */,
 				5E5EE4CA1BE6983B008768C9 /* Location.swift in Sources */,
 				28388C621BE692C9004FC392 /* AppDelegate.swift in Sources */,
 			);
@@ -325,14 +324,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = vulnerable_space/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.vcplusplus.vulnerable-spaces";
+				PRODUCT_BUNDLE_IDENTIFIER = "aorg.vcplusplus.vulnerable-spaces";
 				PRODUCT_NAME = vulnerable_spaces;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "vulnerable_space/Vulnerable-Spaces-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -343,12 +344,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = vulnerable_space/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.vcplusplus.vulnerable-spaces";
+				PRODUCT_BUNDLE_IDENTIFIER = "aorg.vcplusplus.vulnerable-spaces";
 				PRODUCT_NAME = vulnerable_spaces;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "vulnerable_space/Vulnerable-Spaces-Bridging-Header.h";
 			};
 			name = Release;

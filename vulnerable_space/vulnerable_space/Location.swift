@@ -10,8 +10,8 @@ import Parse
 
 class Location : PFObject, PFSubclassing {
     
-    @NSManaged var longitude: Int
-    @NSManaged var latitude: Int
+    @NSManaged var longitude: Double
+    @NSManaged var latitude: Double
     
     override class func initialize() {
         struct Static {
