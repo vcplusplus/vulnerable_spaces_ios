@@ -25,6 +25,7 @@
 */
 
 import UIKit
+import Parse
 
 class MapViewController: UIViewController {
   
@@ -42,6 +43,20 @@ class MapViewController: UIViewController {
   }
     
     @IBAction func submitButtonPressed(sender: AnyObject) {
+        
+        var user = PFUser.currentUser()
+        var location = Location()
+        location.longitude = 0
+        location.latitude = 0
+        location["user"] = user
+        do {
+            try location.save()
+        }
+        catch {
+            
+        }
+        
+        
     }
     
   
