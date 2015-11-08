@@ -40,6 +40,10 @@ class MapViewController: UIViewController {
     locationManager.delegate = self
     locationManager.requestWhenInUseAuthorization()
   }
+    
+    @IBAction func submitButtonPressed(sender: AnyObject) {
+    }
+    
   
 }
 

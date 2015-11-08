@@ -41,7 +41,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="6Hq-pz-3QM">
                         <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" id="Y8r-sI-zD8"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="Y8r-sI-zD8">
+                            <connections>
+                                <action selector="submitButtonPressed:" destination="vXZ-lx-hvc" id="SMs-hR-4mh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapCenterPinImage" destination="Zk1-KE-lC0" id="0LX-XG-TaJ"/>
