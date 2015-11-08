@@ -28,6 +28,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
+        let launchedBefore = NSUserDefaults.standardUserDefaults().boolForKey("LaunchedBefore")
+        if launchedBefore {
+            if let currentUser = PFUser.currentUser() {
+                
+            }
+            else {
+                let deviceIdentifier = UIDevice.currentDevice().identifierForVendor!.UUIDString
+                PFUser.logInWithUsernameInBackground(deviceIdentifier, password:""){
+                    (user: PFUser?, error: NSError?) -> Void in
+                    if user != nil {
+                        
+                    }
+                    else {
+                        
+                    }
+                }
+            }
+        }
+        else {
+            let user = PFUser()
+            let deviceIdentifier = UIDevice.currentDevice().identifierForVendor!.UUIDString
+            user.username = deviceIdentifier
+            user.password = ""
+            
+            user.signUpInBackgroundWithBlock {
+                (succeeded: Bool, error: NSError?) -> Void in
+                if let error = error{
+                    let errorString = error.userInfo["error"] as? NSString
+                }
+                else {
+                }
+            }
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "LaunchedBefore")
+        }
         
         return true
     }
