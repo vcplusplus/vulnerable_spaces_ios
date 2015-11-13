@@ -34,7 +34,6 @@ class MapViewController: UIViewController {
   @IBOutlet weak var pinImageVerticalConstraint: NSLayoutConstraint!
   var searchedTypes = ["bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant"]
   let locationManager = CLLocationManager()
-var currentLocation:CLLocationCoordinate2D = CLLocationCoordinate2D()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -45,12 +44,17 @@ var currentLocation:CLLocationCoordinate2D = CLLocationCoordinate2D()
   }
     
     @IBAction func submitButtonPressed(sender: AnyObject) {
-        
+        // Go get location of the center point
+        let point:CGPoint = mapView.center
+        let coor:CLLocationCoordinate2D = mapView.projection.coordinateForPoint(point);
+        let currentLocation = coor
+
         var user = PFUser.currentUser()
         var location = Location()
         location.longitude = currentLocation.longitude
         location.latitude = currentLocation.latitude
         location["user"] = user
+        
         do {
             try location.save()
         }
@@ -88,26 +92,15 @@ extension MapViewController: CLLocationManagerDelegate {
       
       // 7
       mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 18, bearing: 0, viewingAngle: 0)
-        
-        let point:CGPoint = mapView.center
-        let coor:CLLocationCoordinate2D = mapView.projection.coordinateForPoint(point);
-        currentLocation = coor
       
-      // 8
+        // 8
       locationManager.stopUpdatingLocation()
         
     }
     
     }
+    
 }
-
-    extension MapViewController: GMSMapViewDelegate {
-        func mapView(mapView: GMSMapView!, didChangeCameraPosition position: GMSCameraPosition!) {
-            let point:CGPoint = mapView.center
-            let coor:CLLocationCoordinate2D = mapView.projection.coordinateForPoint(point);
-            currentLocation = coor
-        }
-    }
    
 
   
