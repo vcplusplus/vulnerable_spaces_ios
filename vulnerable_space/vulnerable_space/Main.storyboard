@@ -17,24 +17,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9et-xB-5eb">
-                                <rect key="frame" x="231" y="493" width="168" height="52"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXt-e6-KaN">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.68235294120000001" green="0.30588235289999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">The data of “emotional moments,” collected via this application, from Vassar students with regard to the campus and the surrounding Poughkeepsie area will be used to construct one or many visualized pieces demonstrating shared spaces of importance and vulnerability. In discovering these common spaces, the hope is learn more about how we as Vassar students can communicate and connect with each other. Both the positive and the negative importances we share and the spaces we share need to be better understood. This data is a portion of my ultimate thesis project entitled: The Climate of Vulnerable Spaces. It is all anonymous and no names or personal data will be relayed or incorporated into the project. ~Sarah King</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="43" y="184.5" width="314" height="347.5"/>
+                                </variation>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vulnerable Spaces" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cx9-4r-77w">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="43" y="98" width="314" height="69"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9et-xB-5eb">
+                                <rect key="frame" x="20" y="446" width="168" height="52"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.15145491687167265" green="0.36946784426801804" blue="0.82561910377358494" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="q2l-bJ-LLw"/>
                                     <constraint firstAttribute="width" constant="168" id="wuv-hB-VLu"/>
                                 </constraints>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Submit Location">
-                                            <attributes>
-                                                <color key="NSColor" red="1" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
-                                                <font key="NSFont" size="17" name="HelveticaNeue"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" red="1" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                    <rect key="frame" x="102" y="569" width="168" height="52"/>
+                                </variation>
                                 <connections>
                                     <action selector="submitButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PIl-Wt-fCh"/>
                                     <segue destination="vXZ-lx-hvc" kind="show" id="qb2-xd-9de"/>
@@ -42,12 +59,24 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="1" green="0.90285186274082641" blue="0.88198586150263625" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.99850755980987216" blue="0.99594425792114039" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="UXt-e6-KaN"/>
+                                <exclude reference="cx9-4r-77w"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="UXt-e6-KaN"/>
+                                <include reference="cx9-4r-77w"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6i-og-Hed" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="950" y="726"/>
+            <point key="canvasLocation" x="949.5" y="726"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="ufC-wZ-h7g">
