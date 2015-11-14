@@ -37,6 +37,9 @@
                                 <state key="normal" title="Submit Location">
                                     <color key="titleColor" red="1" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Nd5-TC-q7b"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -54,15 +57,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="6Hq-pz-3QM">
                         <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" title="Submit" id="Y8r-sI-zD8">
-                            <connections>
-                                <action selector="submitButtonPressed:" destination="vXZ-lx-hvc" id="SMs-hR-4mh"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapCenterPinImage" destination="Zk1-KE-lC0" id="0LX-XG-TaJ"/>
                         <outlet property="mapView" destination="GhU-mr-Fgb" id="Jn5-I3-Hnm"/>
+                        <outlet property="submitButton" destination="kT2-T4-EoP" id="Q8U-Hn-ZuZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

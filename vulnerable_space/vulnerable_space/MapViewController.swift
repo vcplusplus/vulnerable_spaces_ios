@@ -29,6 +29,7 @@ import Parse
 
 class MapViewController: UIViewController {
   
+    @IBOutlet weak var submitButton: UIButton!
   @IBOutlet weak var mapView: GMSMapView!
   @IBOutlet weak var mapCenterPinImage: UIImageView!
   @IBOutlet weak var pinImageVerticalConstraint: NSLayoutConstraint!
@@ -40,15 +41,16 @@ class MapViewController: UIViewController {
     // Do any additional setup after loading the view, typically from a nib.
     locationManager.delegate = self
     locationManager.requestWhenInUseAuthorization()
-    
+    submitButton.layer.cornerRadius = 10;
+    submitButton.clipsToBounds = true;
   }
     
-    @IBAction func submitButtonPressed(sender: AnyObject) {
+    @IBAction func submitButtonPressed(sender: UIButton) {
         // Go get location of the center point
         let point:CGPoint = mapView.center
         let coor:CLLocationCoordinate2D = mapView.projection.coordinateForPoint(point);
         let currentLocation = coor
-
+        
         var user = PFUser.currentUser()
         var location = Location()
         location.longitude = currentLocation.longitude
@@ -61,8 +63,6 @@ class MapViewController: UIViewController {
         catch {
             
         }
-        
-        
     }
     
   
