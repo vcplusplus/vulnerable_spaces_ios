@@ -20,7 +20,7 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9et-xB-5eb">
                                 <rect key="frame" x="20" y="446" width="168" height="52"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.8717017983490567" green="0.098860176297896743" blue="0.14692517347670928" alpha="0.85288869598765427" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="q2l-bJ-LLw"/>
                                     <constraint firstAttribute="width" constant="168" id="wuv-hB-VLu"/>
@@ -44,7 +44,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                                 <string key="text">The data of “emotional moments,” collected via this application, from Vassar students with regard to the campus and the surrounding Poughkeepsie area will be used to construct one or many visualized pieces demonstrating shared spaces of importance and vulnerability. In discovering these common spaces, the hope is learn more about how we as Vassar students can communicate and connect with each other. Both the positive and the negative importances we share and the spaces we share need to be better understood. This data is a portion of my ultimate thesis project entitled: The Climate of Vulnerable Spaces. It is all anonymous and no names or personal data will be relayed or incorporated into the project. ~Sarah King</string>
-                                <color key="textColor" red="1" green="0.99850755980000006" blue="0.99594425789999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -58,7 +58,7 @@
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <color key="textColor" red="1" green="0.99850755980000006" blue="0.99594425789999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="43" y="98" width="314" height="69"/>
@@ -69,7 +69,7 @@
                             </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.52933372641509435" green="0.52933372641509435" blue="0.52933372641509435" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="dMJ-rB-YDU"/>
@@ -112,7 +112,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kT2-T4-EoP">
                                 <rect key="frame" x="216" y="526" width="168" height="52"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.68235294117647061" green="0.30588235294117649" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.10196078431372549" blue="0.023529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="168" id="4XU-kx-KJ7"/>
                                     <constraint firstAttribute="height" constant="52" id="Mge-Sm-8WT"/>
