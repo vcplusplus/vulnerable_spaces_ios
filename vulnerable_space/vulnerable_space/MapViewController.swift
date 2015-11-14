@@ -78,6 +78,11 @@ class MapViewController: UIViewController {
         catch {
             
         }
+        
+        let alert = UIAlertController(title: "Submitted!", message: "You submitted a location.", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+        
     }
     
   
