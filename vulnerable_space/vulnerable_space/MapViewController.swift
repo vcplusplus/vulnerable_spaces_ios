@@ -35,15 +35,29 @@ class MapViewController: UIViewController {
   @IBOutlet weak var pinImageVerticalConstraint: NSLayoutConstraint!
   var searchedTypes = ["bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant"]
   let locationManager = CLLocationManager()
-  
+    var launchedBefore:Bool =  NSUserDefaults.standardUserDefaults().boolForKey("LaunchedBefore");
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     // Do any additional setup after loading the view, typically from a nib.
     locationManager.delegate = self
     locationManager.requestWhenInUseAuthorization()
     submitButton.layer.cornerRadius = 10;
     submitButton.clipsToBounds = true;
+    
+    
   }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if (launchedBefore) {
+        } else {
+           // let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.Alert)
+           // alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+           // self.presentViewController(alert, animated: true, completion: nil)
+          //  showLocationAlert = true;
+        }
+    }
     
     @IBAction func submitButtonPressed(sender: UIButton) {
         // Go get location of the center point
@@ -56,6 +70,7 @@ class MapViewController: UIViewController {
         location.longitude = currentLocation.longitude
         location.latitude = currentLocation.latitude
         location["user"] = user
+        
         
         do {
             try location.save()
@@ -82,8 +97,8 @@ extension MapViewController: CLLocationManagerDelegate {
       //5
       mapView.myLocationEnabled = true
       mapView.settings.myLocationButton = true
-        
     }
+    
   }
   
   // 6
