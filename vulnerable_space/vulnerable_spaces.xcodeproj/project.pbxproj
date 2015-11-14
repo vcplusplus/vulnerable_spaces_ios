@@ -10,7 +10,7 @@
 		28388C621BE692C9004FC392 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28388C611BE692C9004FC392 /* AppDelegate.swift */; };
 		28388C691BE692C9004FC392 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28388C681BE692C9004FC392 /* Assets.xcassets */; };
 		28388C6C1BE692C9004FC392 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28388C6A1BE692C9004FC392 /* LaunchScreen.storyboard */; };
-		29B002979531B0D822435B0B /* Pods_vulnerable_spaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C4642DC8BDD4E01BBEA9E8 /* Pods_vulnerable_spaces.framework */; };
+		29B002979531B0D822435B0B /* Pods_vulnerable_spaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C4642DC8BDD4E01BBEA9E8 /* Pods_vulnerable_spaces.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		5E5EE4CA1BE6983B008768C9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5EE4C91BE6983B008768C9 /* Location.swift */; };
 		EB8A18791BEFDB9300F004B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB8A18781BEFDB9300F004B8 /* Main.storyboard */; };
 		EB8A187F1BEFDD7E00F004B8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8A187E1BEFDD7E00F004B8 /* MapViewController.swift */; };
@@ -106,6 +106,7 @@
 				28388C5C1BE692C9004FC392 /* Resources */,
 				7B3033866221E633128E75CD /* Embed Pods Frameworks */,
 				107C18EE648B1A6AF6AEF8B2 /* Copy Pods Resources */,
+				28D5430F1BF79B60003C5ED4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -128,7 +129,7 @@
 				TargetAttributes = {
 					28388C5D1BE692C9004FC392 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 63H5SAKBK2;
+						DevelopmentTeam = BFNZK9859V;
 					};
 				};
 			};
@@ -178,6 +179,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vulnerable_spaces/Pods-vulnerable_spaces-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		28D5430F1BF79B60003C5ED4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/Fabric.framework/run\" 1c19b8f3e17657c87c948d3b7c98764a72942bc9 318fcd75a28a064e7c29b5b320823debe64dbbdcdde7145a9b07229890111f66";
 		};
 		7B3033866221E633128E75CD /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -329,7 +343,54 @@
 				INFOPLIST_FILE = vulnerable_space/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "aorg.vcplusplus.vulnerable-spaces";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Bolts\"",
+					"-framework",
+					"\"CoreBluetooth\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Crashlytics\"",
+					"-framework",
+					"\"Fabric\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"Parse\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.vcplusplus.vulnerable-spaces";
 				PRODUCT_NAME = vulnerable_spaces;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "vulnerable_space/Vulnerable-Spaces-Bridging-Header.h";
@@ -349,7 +410,54 @@
 				INFOPLIST_FILE = vulnerable_space/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "aorg.vcplusplus.vulnerable-spaces";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Bolts\"",
+					"-framework",
+					"\"CoreBluetooth\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Crashlytics\"",
+					"-framework",
+					"\"Fabric\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"Parse\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.vcplusplus.vulnerable-spaces";
 				PRODUCT_NAME = vulnerable_spaces;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "vulnerable_space/Vulnerable-Spaces-Bridging-Header.h";
