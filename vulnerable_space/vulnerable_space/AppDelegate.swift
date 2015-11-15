@@ -41,12 +41,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
 
+    
         let launchedBefore = NSUserDefaults.standardUserDefaults().boolForKey("LaunchedBefore")
+        let storyboard = UIStoryboard(name:"Main", bundle:NSBundle.mainBundle());
+        var rootViewController : UIViewController;
+        
+        
         if launchedBefore {
-            if let currentUser = PFUser.currentUser() {
-
+            if let _ = PFUser.currentUser() {
+                
             }
             else {
+                // Set up unique user
                 let deviceIdentifier = UIDevice.currentDevice().identifierForVendor!.UUIDString
                 PFUser.logInWithUsernameInBackground(deviceIdentifier, password:""){
                     (user: PFUser?, error: NSError?) -> Void in
@@ -57,7 +63,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
                     }
                 }
+
             }
+             rootViewController = storyboard.instantiateViewControllerWithIdentifier("mapView") as UIViewController;
         }
         else {
             let user = PFUser()
@@ -68,13 +76,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             user.signUpInBackgroundWithBlock {
                 (succeeded: Bool, error: NSError?) -> Void in
                 if let error = error{
-                    let errorString = error.userInfo["error"] as? NSString
+                    _ = error.userInfo["error"] as? NSString
                 }
                 else {
                 }
             }
+            
+            // Launch welcome view
+            rootViewController = storyboard.instantiateViewControllerWithIdentifier("welcomeView") as UIViewController;
+            
+            
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "LaunchedBefore")
         }
+        
+        self.window?.rootViewController = rootViewController
+        self.window?.makeKeyAndVisible()
 
         return true
     }

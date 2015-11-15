@@ -29,31 +29,54 @@ import Parse
 
 class MapViewController: UIViewController {
   
+    @IBOutlet weak var submitButton: UIButton!
   @IBOutlet weak var mapView: GMSMapView!
   @IBOutlet weak var mapCenterPinImage: UIImageView!
   @IBOutlet weak var pinImageVerticalConstraint: NSLayoutConstraint!
   var searchedTypes = ["bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant"]
   let locationManager = CLLocationManager()
-  
+    var launchedBefore:Bool =  NSUserDefaults.standardUserDefaults().boolForKey("LaunchedBefore");
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     // Do any additional setup after loading the view, typically from a nib.
     locationManager.delegate = self
     locationManager.requestWhenInUseAuthorization()
+    submitButton.layer.cornerRadius = 10;
+    submitButton.clipsToBounds = true;
+    
     
   }
     
-    @IBAction func submitButtonPressed(sender: AnyObject) {
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if (launchedBefore) {
+        } else {
+           // let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.Alert)
+           // alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+           // self.presentViewController(alert, animated: true, completion: nil)
+          //  showLocationAlert = true;
+        }
+    }
+    
+    @IBAction func infoButtonPressed(sender: AnyObject) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("welcomeView") as! WelcomeViewController
+        self.presentViewController(vc,animated:true,completion:nil)
+    }
+    
+    @IBAction func submitButtonPressed(sender: UIButton) {
         // Go get location of the center point
         let point:CGPoint = mapView.center
         let coor:CLLocationCoordinate2D = mapView.projection.coordinateForPoint(point);
         let currentLocation = coor
-
+        
         var user = PFUser.currentUser()
         var location = Location()
         location.longitude = currentLocation.longitude
         location.latitude = currentLocation.latitude
         location["user"] = user
+        
         
         do {
             try location.save()
@@ -62,6 +85,9 @@ class MapViewController: UIViewController {
             
         }
         
+        let alert = UIAlertController(title: "Submitted!", message: "You submitted a location.", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
         
     }
     
@@ -82,8 +108,8 @@ extension MapViewController: CLLocationManagerDelegate {
       //5
       mapView.myLocationEnabled = true
       mapView.settings.myLocationButton = true
-        
     }
+    
   }
   
   // 6
