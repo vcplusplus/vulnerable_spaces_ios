@@ -59,6 +59,12 @@ class MapViewController: UIViewController {
         }
     }
     
+    @IBAction func infoButtonPressed(sender: AnyObject) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("welcomeView") as! WelcomeViewController
+        self.presentViewController(vc,animated:true,completion:nil)
+    }
+    
     @IBAction func submitButtonPressed(sender: UIButton) {
         // Go get location of the center point
         let point:CGPoint = mapView.center
