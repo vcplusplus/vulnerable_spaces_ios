@@ -41,12 +41,9 @@
                                     <action selector="submitButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PIl-Wt-fCh"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7f-pb-5p3">
-                                <rect key="frame" x="180" y="233" width="240" height="133"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7f-pb-5p3">
+                                <rect key="frame" x="83" y="104" width="434" height="391"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="1Nr-6X-wYl"/>
-                                </constraints>
                                 <string key="text">The data of “emotional moments,” collected via this application, from Vassar students with regard to the campus and the surrounding Poughkeepsie area will be used to construct one or many visualized pieces demonstrating shared spaces of importance and vulnerability. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -55,11 +52,12 @@
                         <animations/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="u7f-pb-5p3" firstAttribute="centerX" secondItem="9et-xB-5eb" secondAttribute="centerX" id="3vw-CB-35t"/>
+                            <constraint firstItem="u7f-pb-5p3" firstAttribute="centerX" secondItem="9et-xB-5eb" secondAttribute="centerX" id="1OV-j8-jKc"/>
                             <constraint firstItem="b5f-Ea-1SN" firstAttribute="top" secondItem="9et-xB-5eb" secondAttribute="bottom" constant="30" id="8Tm-fv-RlM"/>
-                            <constraint firstItem="u7f-pb-5p3" firstAttribute="centerY" secondItem="UJd-Gy-v7U" secondAttribute="centerY" id="GIN-Ru-3uG"/>
-                            <constraint firstItem="u7f-pb-5p3" firstAttribute="top" secondItem="ns8-3x-ZiL" secondAttribute="bottom" constant="213" id="IcD-RU-OYh"/>
-                            <constraint firstItem="u7f-pb-5p3" firstAttribute="centerX" secondItem="UJd-Gy-v7U" secondAttribute="centerX" id="e7x-IZ-wOs"/>
+                            <constraint firstItem="u7f-pb-5p3" firstAttribute="centerX" secondItem="UJd-Gy-v7U" secondAttribute="centerX" id="GVg-MV-B1Y"/>
+                            <constraint firstItem="u7f-pb-5p3" firstAttribute="leading" secondItem="UJd-Gy-v7U" secondAttribute="leadingMargin" constant="63" id="aJ5-a8-OIo"/>
+                            <constraint firstItem="9et-xB-5eb" firstAttribute="top" secondItem="u7f-pb-5p3" secondAttribute="bottom" constant="23" id="kA1-De-o2V"/>
+                            <constraint firstItem="u7f-pb-5p3" firstAttribute="centerY" secondItem="UJd-Gy-v7U" secondAttribute="centerY" id="yZx-tl-o1S"/>
                         </constraints>
                     </view>
                     <connections>
@@ -136,9 +134,6 @@
                             <constraint firstItem="GhU-mr-Fgb" firstAttribute="centerX" secondItem="kT2-T4-EoP" secondAttribute="centerX" id="xPv-7D-RE0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6Hq-pz-3QM">
-                        <nil key="title"/>
-                    </navigationItem>
                     <connections>
                         <outlet property="mapCenterPinImage" destination="Zk1-KE-lC0" id="0LX-XG-TaJ"/>
                         <outlet property="mapView" destination="GhU-mr-Fgb" id="Jn5-I3-Hnm"/>
@@ -151,6 +146,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pin" width="30" height="143"/>
+        <image name="pin" width="15" height="71"/>
     </resources>
 </document>

@@ -33,7 +33,6 @@ class MapViewController: UIViewController {
   @IBOutlet weak var mapView: GMSMapView!
   @IBOutlet weak var mapCenterPinImage: UIImageView!
   @IBOutlet weak var pinImageVerticalConstraint: NSLayoutConstraint!
-  var searchedTypes = ["bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant"]
   let locationManager = CLLocationManager()
     var launchedBefore:Bool =  NSUserDefaults.standardUserDefaults().boolForKey("LaunchedBefore");
   override func viewDidLoad() {
@@ -71,8 +70,8 @@ class MapViewController: UIViewController {
         let coor:CLLocationCoordinate2D = mapView.projection.coordinateForPoint(point);
         let currentLocation = coor
         
-        var user = PFUser.currentUser()
-        var location = Location()
+        let user = PFUser.currentUser()
+        let location = Location()
         location.longitude = currentLocation.longitude
         location.latitude = currentLocation.latitude
         location["user"] = user
@@ -85,7 +84,7 @@ class MapViewController: UIViewController {
             
         }
         
-        let alert = UIAlertController(title: "Submitted!", message: "You submitted a location.", preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: "Submitted!", message: "Location submitted successfully", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
         
