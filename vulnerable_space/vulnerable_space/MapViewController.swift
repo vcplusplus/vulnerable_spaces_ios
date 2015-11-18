@@ -41,7 +41,8 @@ class MapViewController: UIViewController {
     // Do any additional setup after loading the view, typically from a nib.
     locationManager.delegate = self
     locationManager.requestWhenInUseAuthorization()
-    submitButton.layer.cornerRadius = 10;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+    submitButton.layer.cornerRadius = 10
     submitButton.clipsToBounds = true;
     
     // Putting the user's submitted pin on the board
@@ -56,21 +57,16 @@ class MapViewController: UIViewController {
         
         if let user = PFUser.currentUser() {
             query.whereKey("user", equalTo:user)
-            print("user")
             query.findObjectsInBackgroundWithBlock {
                 (locations: [PFObject]?, error: NSError?) -> Void in
-                print("run block")
                 if error == nil {
                     // The find succeeded.
                     // Do something with the found objects
-                    print("error is not nil")
                     if let locations = locations as [PFObject]! {
                         print("a location")
                         for location in locations {
                             let lat:Double = location.objectForKey("latitude") as! Double
                             let long:Double = location.objectForKey("longitude") as! Double
-                            print(lat)
-                            print(long)
                             let position = CLLocationCoordinate2DMake(lat, long)
                             let marker = GMSMarker(position:position);
                             // marker icon?
@@ -78,7 +74,6 @@ class MapViewController: UIViewController {
                         }
                     }
                 }
-                print("block run")
 
             }
         }
