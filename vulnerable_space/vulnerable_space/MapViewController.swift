@@ -44,18 +44,49 @@ class MapViewController: UIViewController {
     submitButton.layer.cornerRadius = 10;
     submitButton.clipsToBounds = true;
     
+    // Putting the user's submitted pin on the board
+    putSubmittedPinsOnTheMap()
     
   }
     
+    func putSubmittedPinsOnTheMap() {
+        
+        let query = PFQuery(className:"Location")
+        print("run")
+        
+        if let user = PFUser.currentUser() {
+            query.whereKey("user", equalTo:user)
+            print("user")
+            query.findObjectsInBackgroundWithBlock {
+                (locations: [PFObject]?, error: NSError?) -> Void in
+                print("run block")
+                if error == nil {
+                    // The find succeeded.
+                    // Do something with the found objects
+                    print("error is not nil")
+                    if let locations = locations as [PFObject]! {
+                        print("a location")
+                        for location in locations {
+                            let lat:Double = location.objectForKey("latitude") as! Double
+                            let long:Double = location.objectForKey("longitude") as! Double
+                            print(lat)
+                            print(long)
+                            let position = CLLocationCoordinate2DMake(lat, long)
+                            let marker = GMSMarker(position:position);
+                            // marker icon?
+                            marker.map = self.mapView
+                        }
+                    }
+                }
+                print("block run")
+
+            }
+        }
+    }
+    
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        if (launchedBefore) {
-        } else {
-           // let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.Alert)
-           // alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-           // self.presentViewController(alert, animated: true, completion: nil)
-          //  showLocationAlert = true;
-        }
     }
     
     @IBAction func infoButtonPressed(sender: AnyObject) {
@@ -63,6 +94,7 @@ class MapViewController: UIViewController {
         let vc = storyboard.instantiateViewControllerWithIdentifier("welcomeView") as! WelcomeViewController
         self.presentViewController(vc,animated:true,completion:nil)
     }
+    
     
     @IBAction func submitButtonPressed(sender: UIButton) {
         // Go get location of the center point
@@ -84,11 +116,23 @@ class MapViewController: UIViewController {
             
         }
         
+        // Location submitted alert!
         let alert = UIAlertController(title: "Submitted!", message: "Location submitted successfully", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
         
+        // Put a pin on the location that we just submitted
+        let position = CLLocationCoordinate2DMake(currentLocation.latitude, currentLocation.longitude)
+        let marker = GMSMarker(position: position)
+        //marker.icon
+        marker.map = mapView
     }
+    
+    // UNDO
+    // 1. Get all of the user's locations with time stamps
+    // 2. Find the one that is the most recent
+    // 3. Delete the most recent one
+    // 4. Update the submittedPins on the map
     
   
 }
@@ -108,7 +152,6 @@ extension MapViewController: CLLocationManagerDelegate {
       mapView.myLocationEnabled = true
       mapView.settings.myLocationButton = true
     }
-    
   }
   
   // 6

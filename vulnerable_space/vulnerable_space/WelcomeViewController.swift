@@ -26,7 +26,6 @@ class WelcomeViewController: UIViewController {
         textBox.text = text0
         textCounter = 0
     }
-    
     @IBAction func continueButtonPressed(sender: UIButton) {
         textCounter++
         if textCounter == 1 {
