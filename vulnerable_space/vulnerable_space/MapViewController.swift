@@ -35,6 +35,8 @@ class MapViewController: UIViewController {
   @IBOutlet weak var pinImageVerticalConstraint: NSLayoutConstraint!
   let locationManager = CLLocationManager()
     var launchedBefore:Bool =  NSUserDefaults.standardUserDefaults().boolForKey("LaunchedBefore");
+    
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -44,16 +46,26 @@ class MapViewController: UIViewController {
     locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
     submitButton.layer.cornerRadius = 10
     submitButton.clipsToBounds = true;
+
+    
+    
+    
     
     // Putting the user's submitted pin on the board
     putSubmittedPinsOnTheMap()
+    
+    let point:CGPoint = mapView.center
+    let coor:CLLocationCoordinate2D = mapView.projection.coordinateForPoint(point);
+    let marker = GMSMarker(position: coor)
+    // marker.icon = UIImage(named: "pin")!
+    marker.map = mapView
+    print("hi")
     
   }
     
     func putSubmittedPinsOnTheMap() {
         
         let query = PFQuery(className:"Location")
-        print("run")
         
         if let user = PFUser.currentUser() {
             query.whereKey("user", equalTo:user)
@@ -63,7 +75,6 @@ class MapViewController: UIViewController {
                     // The find succeeded.
                     // Do something with the found objects
                     if let locations = locations as [PFObject]! {
-                        print("a location")
                         for location in locations {
                             let lat:Double = location.objectForKey("latitude") as! Double
                             let long:Double = location.objectForKey("longitude") as! Double
@@ -95,6 +106,11 @@ class MapViewController: UIViewController {
         // Go get location of the center point
         let point:CGPoint = mapView.center
         let coor:CLLocationCoordinate2D = mapView.projection.coordinateForPoint(point);
+        // Put a pin on the location that we just submitted
+        let marker = GMSMarker(position: coor)
+        //marker.icon
+        marker.map = mapView
+        
         let currentLocation = coor
         
         let user = PFUser.currentUser()
@@ -116,11 +132,7 @@ class MapViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
         
-        // Put a pin on the location that we just submitted
-        let position = CLLocationCoordinate2DMake(currentLocation.latitude, currentLocation.longitude)
-        let marker = GMSMarker(position: position)
-        //marker.icon
-        marker.map = mapView
+        
     }
     
     // UNDO
