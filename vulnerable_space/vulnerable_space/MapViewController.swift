@@ -46,20 +46,11 @@ class MapViewController: UIViewController {
     locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
     submitButton.layer.cornerRadius = 10
     submitButton.clipsToBounds = true;
-
-    
-    
-    
     
     // Putting the user's submitted pin on the board
     putSubmittedPinsOnTheMap()
     
-    let point:CGPoint = mapView.center
-    let coor:CLLocationCoordinate2D = mapView.projection.coordinateForPoint(point);
-    let marker = GMSMarker(position: coor)
-    // marker.icon = UIImage(named: "pin")!
-    marker.map = mapView
-    print("hi")
+    
     
   }
     
@@ -96,6 +87,7 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func infoButtonPressed(sender: AnyObject) {
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewControllerWithIdentifier("welcomeView") as! WelcomeViewController
         self.presentViewController(vc,animated:true,completion:nil)
@@ -104,7 +96,7 @@ class MapViewController: UIViewController {
     
     @IBAction func submitButtonPressed(sender: UIButton) {
         // Go get location of the center point
-        let point:CGPoint = mapView.center
+        let point:CGPoint = self.view.center
         let coor:CLLocationCoordinate2D = mapView.projection.coordinateForPoint(point);
         // Put a pin on the location that we just submitted
         let marker = GMSMarker(position: coor)
