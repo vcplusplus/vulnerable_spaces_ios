@@ -151,35 +151,36 @@ class MapViewController: UIViewController {
                     // The find succeeded.
                     // Do something with the found objects
                     var latestLocation = locations![0]
-                    let dateFormatter = NSDateFormatter()
-                    
                     if let locations = locations as [PFObject]! {
                         for location in locations {
-                            print("k")
-                            let currentTimeString:String = location.objectForKey("updatedAt") as! String
-                            print("a")
-                            let latestTimeString:String = latestLocation.objectForKey("updatedAt") as! String
-                            print("k")
-                            dateFormatter.dateFormat = "yyy'-'MM'-'dd'T'HH':'mm':'ss.SSS'Z'"
-                            let currentDate:NSDate = dateFormatter.dateFromString(currentTimeString)!
-                            print("b")
-                            let latestDate:NSDate = dateFormatter.dateFromString(latestTimeString)!
-                            print("c")
-                            if(currentDate.laterDate(latestDate) == currentDate) {
+                            if((latestLocation.updatedAt!).laterDate(location.updatedAt!) == location.updatedAt) {
                                 latestLocation = location
-                                print("k")
                             }
-                            print("d")
                             
                         }
                         
                     }
                     
+                    // Location submitted alert!
+                    let alert = UIAlertController(title: "Warning!", message: "Are you sure you want to delete your last pin?", preferredStyle: UIAlertControllerStyle.Alert)
                     
-                    print("finish")
-                    latestLocation.deleteInBackground();
-                    self.refreshPins()
-                   
+                    alert.addAction(UIAlertAction(title:"Yes", style:.Default, handler: { (action: UIAlertAction!) in
+                        
+                        latestLocation.deleteInBackgroundWithBlock({ (v:Bool, error: NSError?) -> Void in
+                            self.refreshPins()
+                        })
+                        
+                        }))
+                        
+                    alert.addAction(UIAlertAction(title:"No", style:.Default, handler: { (action: UIAlertAction!) in
+                        
+                        }))
+                
+                    
+                    self.presentViewController(alert, animated: true, completion: nil)
+                    
+                    
+                
                 }
                 
             }
@@ -188,7 +189,7 @@ class MapViewController: UIViewController {
     }
     
     func refreshPins() {
-        //    self.mapView.clear()
+        self.mapView.clear();
         self.putSubmittedPinsOnTheMap()
         print("really finished")
     }
