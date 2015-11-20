@@ -53,7 +53,7 @@ class MapViewController: UIViewController {
         let button   = UIButton(type: UIButtonType.System) as UIButton
         button.frame = CGRectMake(100, 100, 100, 50)
         button.backgroundColor = UIColor.greenColor()
-        button.setTitle("Test Button", forState: UIControlState.Normal)
+        button.setTitle("Undo", forState: UIControlState.Normal)
         button.addTarget(self, action: "deleteLastPin:", forControlEvents: UIControlEvents.TouchUpInside)
         
         self.view.addSubview(button)
