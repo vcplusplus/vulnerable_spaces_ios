@@ -28,31 +28,41 @@ import UIKit
 import Parse
 
 class MapViewController: UIViewController {
-  
+    
     @IBOutlet weak var submitButton: UIButton!
-  @IBOutlet weak var mapView: GMSMapView!
-  @IBOutlet weak var mapCenterPinImage: UIImageView!
-  @IBOutlet weak var pinImageVerticalConstraint: NSLayoutConstraint!
-  let locationManager = CLLocationManager()
+    @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var mapCenterPinImage: UIImageView!
+    @IBOutlet weak var pinImageVerticalConstraint: NSLayoutConstraint!
+    let locationManager = CLLocationManager()
     var launchedBefore:Bool =  NSUserDefaults.standardUserDefaults().boolForKey("LaunchedBefore");
     
     
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    // Do any additional setup after loading the view, typically from a nib.
-    locationManager.delegate = self
-    locationManager.requestWhenInUseAuthorization()
-    locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
-    submitButton.layer.cornerRadius = 10
-    submitButton.clipsToBounds = true;
-    
-    // Putting the user's submitted pin on the board
-    putSubmittedPinsOnTheMap()
-    
-    
-    
-  }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view, typically from a nib.
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        submitButton.layer.cornerRadius = 10
+        submitButton.clipsToBounds = true;
+        
+        // Putting the user's submitted pin on the board
+        putSubmittedPinsOnTheMap()
+        
+        let button   = UIButton(type: UIButtonType.System) as UIButton
+        button.frame = CGRectMake(100, 100, 100, 50)
+        button.backgroundColor = UIColor.greenColor()
+        button.setTitle("Test Button", forState: UIControlState.Normal)
+        button.addTarget(self, action: "deleteLastPin:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        self.view.addSubview(button)
+        
+        
+        
+        
+        
+    }
     
     func putSubmittedPinsOnTheMap() {
         
@@ -76,7 +86,7 @@ class MapViewController: UIViewController {
                         }
                     }
                 }
-
+                
             }
         }
     }
@@ -129,45 +139,101 @@ class MapViewController: UIViewController {
     
     // UNDO
     // 1. Get all of the user's locations with time stamps
+    
+    @IBAction func deleteLastPin(sender: AnyObject) {
+        let query = PFQuery(className:"Location")
+        print("hello to you")
+        if let user = PFUser.currentUser() {
+            query.whereKey("user", equalTo:user)
+            query.findObjectsInBackgroundWithBlock {
+                (locations: [PFObject]?, error: NSError?) -> Void in
+                if error == nil {
+                    // The find succeeded.
+                    // Do something with the found objects
+                    var latestLocation = locations![0]
+                    let dateFormatter = NSDateFormatter()
+                    
+                    if let locations = locations as [PFObject]! {
+                        for location in locations {
+                            print("k")
+                            let currentTimeString:String = location.objectForKey("updatedAt") as! String
+                            print("a")
+                            let latestTimeString:String = latestLocation.objectForKey("updatedAt") as! String
+                            print("k")
+                            dateFormatter.dateFormat = "yyy'-'MM'-'dd'T'HH':'mm':'ss.SSS'Z'"
+                            let currentDate:NSDate = dateFormatter.dateFromString(currentTimeString)!
+                            print("b")
+                            let latestDate:NSDate = dateFormatter.dateFromString(latestTimeString)!
+                            print("c")
+                            if(currentDate.laterDate(latestDate) == currentDate) {
+                                latestLocation = location
+                                print("k")
+                            }
+                            print("d")
+                            
+                        }
+                        
+                    }
+                    
+                    
+                    print("finish")
+                    latestLocation.deleteInBackground();
+                    self.refreshPins()
+                   
+                }
+                
+            }
+        
+        }
+    }
+    
+    func refreshPins() {
+        //    self.mapView.clear()
+        self.putSubmittedPinsOnTheMap()
+        print("really finished")
+    }
     // 2. Find the one that is the most recent
+    
     // 3. Delete the most recent one
+    
     // 4. Update the submittedPins on the map
     
-  
+    
+    
 }
 
 // MARK: - CLLocationManagerDelegate
 //1
 extension MapViewController: CLLocationManagerDelegate {
-  // 2
-  func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-    // 3
-    if status == .AuthorizedWhenInUse {
-      
-      // 4
-      locationManager.startUpdatingLocation()
-      
-      //5
-      mapView.myLocationEnabled = true
-      mapView.settings.myLocationButton = true
+    // 2
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        // 3
+        if status == .AuthorizedWhenInUse {
+            
+            // 4
+            locationManager.startUpdatingLocation()
+            
+            //5
+            mapView.myLocationEnabled = true
+            mapView.settings.myLocationButton = true
+        }
     }
-  }
-  
-  // 6
-  func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    if let location = locations.first {
-      
-      // 7
-      mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 18, bearing: 0, viewingAngle: 0)
-      
-        // 8
-      locationManager.stopUpdatingLocation()
+    
+    // 6
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            
+            // 7
+            mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 18, bearing: 0, viewingAngle: 0)
+            
+            // 8
+            locationManager.stopUpdatingLocation()
+            
+        }
         
     }
     
-    }
-    
 }
-   
+
 
   
