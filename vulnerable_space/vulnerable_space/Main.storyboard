@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0Ym-Jp-v2S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0Ym-Jp-v2S">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -113,7 +113,7 @@
                                     <action selector="submitButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Nd5-TC-q7b"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KgD-aS-XCx" userLabel="Info Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KgD-aS-XCx" userLabel="Info Button">
                                 <rect key="frame" x="546" y="88" width="22" height="22"/>
                                 <animations/>
                                 <connections>
@@ -128,6 +128,7 @@
                             <constraint firstItem="GhU-mr-Fgb" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="Dhh-BZ-d6e"/>
                             <constraint firstItem="kT2-T4-EoP" firstAttribute="centerX" secondItem="Zk1-KE-lC0" secondAttribute="centerX" id="GZH-4h-3RW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KgD-aS-XCx" secondAttribute="trailing" constant="12" id="LtG-Oe-xsP"/>
+                            <constraint firstItem="KgD-aS-XCx" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="68" id="OhD-VT-tWh"/>
                             <constraint firstItem="KgD-aS-XCx" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="25" id="atD-PW-Tga"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="kT2-T4-EoP" secondAttribute="bottom" constant="22" id="azY-Qy-SgB"/>
                             <constraint firstItem="Zk1-KE-lC0" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="225" id="kX3-fe-xIZ"/>

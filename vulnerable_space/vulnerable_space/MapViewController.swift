@@ -81,6 +81,7 @@ class MapViewController: UIViewController {
                             let long:Double = location.objectForKey("longitude") as! Double
                             let position = CLLocationCoordinate2DMake(lat, long)
                             let marker = GMSMarker(position:position);
+                            marker.icon = UIImage(named: "small_pin")
                             // marker icon?
                             marker.map = self.mapView
                         }
@@ -110,6 +111,8 @@ class MapViewController: UIViewController {
         let coor:CLLocationCoordinate2D = mapView.projection.coordinateForPoint(point);
         // Put a pin on the location that we just submitted
         let marker = GMSMarker(position: coor)
+        
+        marker.icon = UIImage(named: "small_pin")
         //marker.icon
         marker.map = mapView
         
