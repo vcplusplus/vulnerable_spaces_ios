@@ -54,10 +54,18 @@ class MapViewController: UIViewController {
         
         // Put the undo button on the screen
         // TODO: Put the undo button on the storyboard.
-        
+        setupUndoButton()
         
     }
     func setupUndoButton() {
+        
+        undoButton.frame = CGRectMake(160, 100, 55, 55)
+        undoButton.layer.cornerRadius = 0.5 * 55
+        undoButton.layer.shadowOpacity = 0.5
+        undoButton.layer.shadowOffset = CGSize(width: 0, height: 0.8)
+        undoButton.layer.shadowRadius = 1
+        undoButton.layer.shadowColor = UIColor.blackColor().CGColor
+        
         
     }
     
