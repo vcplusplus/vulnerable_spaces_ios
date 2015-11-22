@@ -33,6 +33,8 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var mapCenterPinImage: UIImageView!
     @IBOutlet weak var pinImageVerticalConstraint: NSLayoutConstraint!
+    @IBOutlet weak var undoButton: UIButton!
+    
     let locationManager = CLLocationManager()
     var launchedBefore:Bool =  NSUserDefaults.standardUserDefaults().boolForKey("LaunchedBefore");
     
@@ -52,13 +54,11 @@ class MapViewController: UIViewController {
         
         // Put the undo button on the screen
         // TODO: Put the undo button on the storyboard.
-        let button   = UIButton(type: UIButtonType.System) as UIButton
-        button.frame = CGRectMake(100, 100, 100, 50)
-        button.backgroundColor = UIColor.greenColor()
-        button.setTitle("Undo", forState: UIControlState.Normal)
-        button.addTarget(self, action: "deleteLastPin:", forControlEvents: UIControlEvents.TouchUpInside)
         
-        self.view.addSubview(button)
+        
+    }
+    func setupUndoButton() {
+        
     }
     
     func putSubmittedPinsOnTheMap() {
@@ -138,7 +138,7 @@ class MapViewController: UIViewController {
     
     // UNDO
     
-    @IBAction func deleteLastPin(sender: AnyObject) {
+    @IBAction func undoButtonPressed(sender: UIButton) {
         let query = PFQuery(className:"Location")
         print("hello to you")
         if let user = PFUser.currentUser() {
