@@ -50,6 +50,8 @@ class MapViewController: UIViewController {
         // Putting the user's submitted pin on the board
         putSubmittedPinsOnTheMap()
         
+        // Put the undo button on the screen
+        // TODO: Put the undo button on the storyboard.
         let button   = UIButton(type: UIButtonType.System) as UIButton
         button.frame = CGRectMake(100, 100, 100, 50)
         button.backgroundColor = UIColor.greenColor()
@@ -57,17 +59,13 @@ class MapViewController: UIViewController {
         button.addTarget(self, action: "deleteLastPin:", forControlEvents: UIControlEvents.TouchUpInside)
         
         self.view.addSubview(button)
-        
-        
-        
-        
-        
     }
     
     func putSubmittedPinsOnTheMap() {
-        
+        // Get all locations from Parse
         let query = PFQuery(className:"Location")
         
+        // Put all of the locations on only for the current user
         if let user = PFUser.currentUser() {
             query.whereKey("user", equalTo:user)
             query.findObjectsInBackgroundWithBlock {
@@ -87,7 +85,6 @@ class MapViewController: UIViewController {
                         }
                     }
                 }
-                
             }
         }
     }
@@ -98,7 +95,6 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func infoButtonPressed(sender: AnyObject) {
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewControllerWithIdentifier("welcomeView") as! WelcomeViewController
         self.presentViewController(vc,animated:true,completion:nil)
@@ -141,7 +137,6 @@ class MapViewController: UIViewController {
     }
     
     // UNDO
-    // 1. Get all of the user's locations with time stamps
     
     @IBAction func deleteLastPin(sender: AnyObject) {
         let query = PFQuery(className:"Location")
@@ -173,36 +168,32 @@ class MapViewController: UIViewController {
                             self.refreshPins()
                         })
                         
-                        }))
-                        
+                    }))
+                    
                     alert.addAction(UIAlertAction(title:"No", style:.Default, handler: { (action: UIAlertAction!) in
                         
-                        }))
-                
+                    }))
+                    
                     
                     self.presentViewController(alert, animated: true, completion: nil)
                     
                     
-                
+                    
                 }
                 
             }
-        
+            
         }
     }
     
     func refreshPins() {
+        // Take all of the pins off of the map
         self.mapView.clear();
+        
+        // Get all of the pins and put them on
         self.putSubmittedPinsOnTheMap()
         print("really finished")
     }
-    // 2. Find the one that is the most recent
-    
-    // 3. Delete the most recent one
-    
-    // 4. Update the submittedPins on the map
-    
-    
     
 }
 
