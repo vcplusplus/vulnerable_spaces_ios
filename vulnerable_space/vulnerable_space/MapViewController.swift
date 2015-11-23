@@ -59,12 +59,14 @@ class MapViewController: UIViewController {
     }
     func setupUndoButton() {
         
-        undoButton.frame = CGRectMake(160, 100, 55, 55)
-        undoButton.layer.cornerRadius = 0.5 * 55
+//        undoButton.frame = CGRectMake(160, 100, 55, 55)
+        undoButton.layer.cornerRadius = 0.5 * undoButton.bounds.size.width
         undoButton.layer.shadowOpacity = 0.5
         undoButton.layer.shadowOffset = CGSize(width: 0, height: 0.8)
         undoButton.layer.shadowRadius = 1
         undoButton.layer.shadowColor = UIColor.blackColor().CGColor
+        let undo_icon = UIImage(named: "undo_icon")
+        undoButton.setImage(undo_icon, forState: .Normal)
         
         
     }
