@@ -42,11 +42,11 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7f-pb-5p3">
-                                <rect key="frame" x="83" y="104" width="434" height="391"/>
+                                <rect key="frame" x="46" y="104" width="509" height="391"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">The data of “emotional moments,” collected via this application, from Vassar students with regard to the campus and the surrounding Poughkeepsie area will be used to construct one or many visualized pieces demonstrating shared spaces of importance and vulnerability. </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -56,11 +56,12 @@
                             <constraint firstItem="u7f-pb-5p3" firstAttribute="centerX" secondItem="9et-xB-5eb" secondAttribute="centerX" id="1OV-j8-jKc"/>
                             <constraint firstItem="b5f-Ea-1SN" firstAttribute="top" secondItem="9et-xB-5eb" secondAttribute="bottom" constant="30" id="8Tm-fv-RlM"/>
                             <constraint firstItem="u7f-pb-5p3" firstAttribute="centerX" secondItem="UJd-Gy-v7U" secondAttribute="centerX" id="GVg-MV-B1Y"/>
-                            <constraint firstItem="u7f-pb-5p3" firstAttribute="leading" secondItem="UJd-Gy-v7U" secondAttribute="leadingMargin" constant="63" id="aJ5-a8-OIo"/>
+                            <constraint firstItem="u7f-pb-5p3" firstAttribute="leading" secondItem="UJd-Gy-v7U" secondAttribute="leadingMargin" constant="26" id="aJ5-a8-OIo"/>
                             <constraint firstItem="9et-xB-5eb" firstAttribute="top" secondItem="u7f-pb-5p3" secondAttribute="bottom" constant="23" id="kA1-De-o2V"/>
                             <constraint firstItem="u7f-pb-5p3" firstAttribute="centerY" secondItem="UJd-Gy-v7U" secondAttribute="centerY" id="yZx-tl-o1S"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="continueButton" destination="9et-xB-5eb" id="nQK-x7-xSW"/>
                         <outlet property="textBox" destination="u7f-pb-5p3" id="Vf0-gW-PHD"/>
@@ -109,7 +110,7 @@
                                     <action selector="submitButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Nd5-TC-q7b"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KgD-aS-XCx" userLabel="Info Button">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KgD-aS-XCx" userLabel="Info Button">
                                 <rect key="frame" x="546" y="88" width="22" height="22"/>
                                 <animations/>
                                 <connections>
@@ -169,6 +170,8 @@
                             </mask>
                         </variation>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="mapCenterPinImage" destination="Zk1-KE-lC0" id="0LX-XG-TaJ"/>
                         <outlet property="mapView" destination="GhU-mr-Fgb" id="Jn5-I3-Hnm"/>

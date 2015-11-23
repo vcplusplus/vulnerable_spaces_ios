@@ -162,7 +162,6 @@ class MapViewController: UIViewController {
     }
     @IBAction func undoButtonPressed(sender: UIButton) {
         let query = PFQuery(className:"Location")
-        print("hello to you")
         if let user = PFUser.currentUser() {
             query.whereKey("user", equalTo:user)
             query.findObjectsInBackgroundWithBlock {
@@ -184,7 +183,7 @@ class MapViewController: UIViewController {
                     // Location submitted alert!
                     let alert = UIAlertController(title: "Warning!", message: "Are you sure you want to delete your last pin?", preferredStyle: UIAlertControllerStyle.Alert)
                     
-                    alert.addAction(UIAlertAction(title:"Yes", style:.Default, handler: { (action: UIAlertAction!) in
+                    alert.addAction(UIAlertAction(title:"Delete", style:.Default, handler: { (action: UIAlertAction!) in
                         
                         latestLocation.deleteInBackgroundWithBlock({ (v:Bool, error: NSError?) -> Void in
                             self.refreshPins()
@@ -192,7 +191,7 @@ class MapViewController: UIViewController {
                         
                     }))
                     
-                    alert.addAction(UIAlertAction(title:"No", style:.Default, handler: { (action: UIAlertAction!) in
+                    alert.addAction(UIAlertAction(title:"Cancel", style:.Default, handler: { (action: UIAlertAction!) in
                         
                     }))
                     
@@ -214,7 +213,6 @@ class MapViewController: UIViewController {
         
         // Get all of the pins and put them on
         self.putSubmittedPinsOnTheMap()
-        print("really finished")
     }
     
 }
