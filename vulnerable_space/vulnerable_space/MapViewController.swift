@@ -56,7 +56,6 @@ class MapViewController: UIViewController {
         
         // Put the undo button on the screen
         setupUndoButton()
-        setupUndoButtonShadowsUnselected()
     }
     
     func setupUndoButton() {
@@ -151,7 +150,7 @@ class MapViewController: UIViewController {
     
     @IBAction func undoButtonDown(sender: AnyObject) {
 //        undoButton.setTitle(test", forState: .Normal)
-        undoButton.layer.shadowOpacity = 0.8
+        undoButton.layer.shadowOpacity = 0.6
         undoButton.layer.shadowOffset = CGSize(width: 0, height: 3)
         undoButton.layer.shadowRadius = 3
         undoButton.layer.shadowColor = UIColor.darkGrayColor().CGColor
@@ -161,6 +160,7 @@ class MapViewController: UIViewController {
         setupUndoButtonShadowsUnselected()
     }
     @IBAction func undoButtonPressed(sender: UIButton) {
+        setupUndoButtonShadowsUnselected()
         let query = PFQuery(className:"Location")
         if let user = PFUser.currentUser() {
             query.whereKey("user", equalTo:user)

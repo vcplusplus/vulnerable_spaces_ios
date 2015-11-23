@@ -48,7 +48,7 @@
 		28388C551BE692C9004FC392 = {
 			isa = PBXGroup;
 			children = (
-				28388C601BE692C9004FC392 /* vulnerable_space */,
+				28388C601BE692C9004FC392 /* Vulnerable Spaces */,
 				28388C5F1BE692C9004FC392 /* Products */,
 				B3B44B7EDCBC662266611E2B /* Pods */,
 				D3977CB2A3831ABFA64DCBCE /* Frameworks */,
@@ -63,7 +63,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		28388C601BE692C9004FC392 /* vulnerable_space */ = {
+		28388C601BE692C9004FC392 /* Vulnerable Spaces */ = {
 			isa = PBXGroup;
 			children = (
 				28388C611BE692C9004FC392 /* AppDelegate.swift */,
@@ -76,6 +76,7 @@
 				5E5EE4C91BE6983B008768C9 /* Location.swift */,
 				5E5EE4CB1BE6A7B9008768C9 /* Vulnerable-Spaces-Bridging-Header.h */,
 			);
+			name = "Vulnerable Spaces";
 			path = vulnerable_space;
 			sourceTree = "<group>";
 		};
@@ -136,7 +137,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 28388C591BE692C9004FC392 /* Build configuration list for PBXProject "vulnerable_spaces" */;
+			buildConfigurationList = 28388C591BE692C9004FC392 /* Build configuration list for PBXProject "Vulnerable Spaces" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -424,7 +425,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		28388C591BE692C9004FC392 /* Build configuration list for PBXProject "vulnerable_spaces" */ = {
+		28388C591BE692C9004FC392 /* Build configuration list for PBXProject "Vulnerable Spaces" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28388C6E1BE692C9004FC392 /* Debug */,
