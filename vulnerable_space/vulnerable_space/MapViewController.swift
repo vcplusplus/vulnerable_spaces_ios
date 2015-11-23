@@ -46,29 +46,30 @@ class MapViewController: UIViewController {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        
+//      Setup submit button
         submitButton.layer.cornerRadius = 10
-        submitButton.clipsToBounds = true;
+        submitButton.clipsToBounds = true
         
         // Putting the user's submitted pin on the board
         putSubmittedPinsOnTheMap()
         
         // Put the undo button on the screen
-        // TODO: Put the undo button on the storyboard.
         setupUndoButton()
-        
+        setupUndoButtonShadowsUnselected()
     }
+    
     func setupUndoButton() {
-        
-//        undoButton.frame = CGRectMake(160, 100, 55, 55)
         undoButton.layer.cornerRadius = 0.5 * undoButton.bounds.size.width
-        undoButton.layer.shadowOpacity = 0.5
+        undoButton.setImage(UIImage(named: "undo_icon"), forState: .Normal)
+       setupUndoButtonShadowsUnselected()
+    }
+    
+    func setupUndoButtonShadowsUnselected() {
+        undoButton.layer.shadowOpacity = 0.7
         undoButton.layer.shadowOffset = CGSize(width: 0, height: 0.8)
         undoButton.layer.shadowRadius = 1
-        undoButton.layer.shadowColor = UIColor.blackColor().CGColor
-        let undo_icon = UIImage(named: "undo_icon")
-        undoButton.setImage(undo_icon, forState: .Normal)
-        
-        
+        undoButton.layer.shadowColor = UIColor.darkGrayColor().CGColor
     }
     
     func putSubmittedPinsOnTheMap() {
@@ -148,6 +149,17 @@ class MapViewController: UIViewController {
     
     // UNDO
     
+    @IBAction func undoButtonDown(sender: AnyObject) {
+//        undoButton.setTitle(test", forState: .Normal)
+        undoButton.layer.shadowOpacity = 0.8
+        undoButton.layer.shadowOffset = CGSize(width: 0, height: 3)
+        undoButton.layer.shadowRadius = 3
+        undoButton.layer.shadowColor = UIColor.darkGrayColor().CGColor
+    }
+    
+    @IBAction func undoButtonUpOutside(sender: AnyObject) {
+        setupUndoButtonShadowsUnselected()
+    }
     @IBAction func undoButtonPressed(sender: UIButton) {
         let query = PFQuery(className:"Location")
         print("hello to you")

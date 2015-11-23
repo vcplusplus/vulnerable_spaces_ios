@@ -120,7 +120,7 @@
                                 <rect key="frame" x="285" y="245" width="15" height="71"/>
                                 <animations/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1k5-GJ-yCD">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1k5-GJ-yCD">
                                 <rect key="frame" x="10" y="535" width="56" height="56"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -131,7 +131,9 @@
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="0.0" height="2.2250738585072014e-308"/>
                                 <connections>
+                                    <action selector="undoButtonDown:" destination="vXZ-lx-hvc" eventType="touchDown" id="v3Q-UB-6v7"/>
                                     <action selector="undoButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Qb1-TG-Ima"/>
+                                    <action selector="undoButtonUpOutside:" destination="vXZ-lx-hvc" eventType="touchUpOutside" id="V6l-qf-AOx"/>
                                 </connections>
                             </button>
                         </subviews>
