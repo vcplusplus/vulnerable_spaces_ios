@@ -1,6 +1,6 @@
 PODS:
   - Bolts/Tasks (1.4.0)
-  - Crashlytics (3.4.0):
+  - Crashlytics (3.5.0):
     - Fabric (~> 1.6.0)
   - Fabric (1.6.0):
     - Fabric/Base (= 1.6.0)
@@ -19,10 +19,10 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Bolts: 0e9bce58b9b9f5e8a7a4d47b16d2fabec289072b
-  Crashlytics: 1ee87895c37472eb3f01f409ea1654a464d2f8d4
+  Crashlytics: fabfd45d0e8b8dc936c682b97e302b9a49a1c827
   Fabric: d737eda3a26ac940a5430230eedb35f16b226131
   GoogleMaps: da51c62c338c2d9c47cdad470a0d1e0e4b8544e4
   Parse: 54a965c8c19a6dde90284ab654dbcc77ef8c001b
   SwiftyJSON: 8d6b61a70277ef2a5d710d372e06e7e2d87fb9e4
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0
