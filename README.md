@@ -2,7 +2,7 @@
 
 What is this app?
 
-Our Spaces is an iOS application that allows encodes memories into physical spaces. The app presents a Google Maps view, where users can submit their current location or scroll around the app to submit a different location on Vassar Campus. Our Spaces uses Location Services so that the map moves dynamically with the student. When a user submits a location, the user gets a randomly generated ID and the location, the userID, and the time submitted are saved on a server using Parse. This purpose of this app is to help a fellow Sociology student gathers data for her thesis - more info below. 
+Our Spaces is an iOS application that encodes positive and negative importance into physical spaces. The app presents a Google Maps view, where users can submit their current location or scroll around the map to submit a different location on Vassar Campus. Our Spaces also uses Location Services so that the map moves dynamically with the student. When a user submits a location, the program associates a randomly generated ID with the user and the location, the userID, and the time submitted are saved on a server using Parse. Parse is closing in January 2017, so we are looking into other back-end APIs. This purpose of this app is to help a fellow Sociology student gathers data for her thesis - more info below. 
 
 
 How we will use the data?
