@@ -1,11 +1,12 @@
 # Our Spaces
 
 What is this app?
-To do...
+Our Spaces is an iOS application that allows encodes memories into physical spaces. The app presents a Google Maps view, where users can submit their current location or scroll around the app to submit a different location on Vassar Campus. Our Spaces uses Location Services so that the map moves dynamically with the student. When a user submits a location, the user gets a randomly generated ID and the location, the userID, and the time submitted are saved on a server using Parse. This purpose of this app is to help a fellow Sociology student gathers data for her thesis - more info below. 
+
 
 How we will use the data?
 
-The data of "emotional moments," collected via this application, with regard to the campus and the surrounding Poughkeepsie area will be used to construct one or many visualized pieces demonstrating shared spaces of importance and vulnerability. In discovering these common spaces, the hope is to learn more about how we as Vassar students can communicate and connect with each other. Both the negative and the positive importances we share and the spaces we share need to be better understood. This data is a portion of Sarah King's thesis project entitled: "The Climate of Vulnerable Spaces." All data is anonymous, no names or personal data will be relayed or incorporated into the project
+The data of "emotional moments," collected via this application, with regard to the campus and the surrounding Poughkeepsie area will be used to construct one or many visualized pieces demonstrating shared spaces of importance and vulnerability. In discovering these common spaces, the hope is to learn more about how we as Vassar students can communicate and connect with each other. Both the negative and the positive importances we share and the spaces we share need to be better understood. This data is a portion of Sarah King's thesis project entitled: "The Climate of Vulnerable Spaces." All data is anonymous, no names or personal data will be relayed or incorporated into the project. 
 
 
 Who worked on this?
