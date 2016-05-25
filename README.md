@@ -13,12 +13,8 @@ The data of "emotional moments," collected via this application, with regard to 
 ###Who worked on this?
 
 Kathryn Hodge:
-For Vulnerable Spaces, I mainly worked on the front end. I helped configure the Google Maps View with the Server API key and worked on the code that allowed a user’s pins to be placed in their appropriate locations on the view. I also added UIAlertControllers to allow users to see that their location had been submitted as well as an undo button that not only removed the pin, but also the location from the database. The biggest programming challenge was probably messing around with auto-constraints to get the center pin, buttons, and placed pins exactly how we wanted. Although I learned a lot more about iOS development, I think the most important thing we practiced was how to work within a framework and use protocols to add exciting functionality. This project was so much fun and I can’t wait to create more with VC++!
+For Vulnerable Spaces, I mainly worked on the front end. I helped configure the Google Maps View with the Server API key and worked on the code that allowed a user’s pins to be placed in their appropriate locations on the view. I also added UIAlertControllers to allow users to see that their location had been submitted as well as an undo button that not only removed the pin, but also the location from the database. The biggest programming challenge was probably messing around with auto-constraints to get the center pin, buttons, and placed pins exactly how we wanted. This project was so much fun and I can’t wait to create more with VC++!
 
-Jayce Rudig-Leathers:
+Jayce Rudig-Leathers: Back-end, setting up the database. 
 
-George Witteman:
-
-Annie Hsu:
-
-Gabriel Dell' Accio:
+George Witteman: Back-end, setting up the database.
