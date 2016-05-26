@@ -10,27 +10,21 @@ Our Spaces is an iOS application that allows users to record locations on Vassar
 The data of "emotional moments," collected via this application, with regard to the campus and the surrounding Poughkeepsie area will be used to construct one or many visualized pieces demonstrating shared spaces of importance and vulnerability. In discovering these common spaces, the hope is to learn more about how we as Vassar students can communicate and connect with each other. Both the negative and the positive importances we share and the spaces we share need to be better understood. This data is a portion of Sarah King's thesis project entitled: "The Climate of Vulnerable Spaces." All data is anonymous, no names or personal data will be relayed or incorporated into the project. 
 
 ###Screenshots:
-<img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/Instruction1.jpg" alt="alt text" width="200px" height="350px">
-<img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/Instruction2.jpg" alt="alt text" width="200px" height="350px">
+<img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/Instruction1.png" alt="alt text" width="200px" height="350px">
+<img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/Instruction2.png" alt="alt text" width="200px" height="350px">
 <img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/Instruction4.jpg" alt="alt text" width="200px" height="350px">
 <img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/Screen1.jpg" alt="alt text" width="200px" height="350px">
-<img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/Screen2.jpg" alt="alt text" width="200px" height="350px">
+<img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/Screen2.png" alt="alt text" width="200px" height="350px">
 <img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/Screen3.jpg" alt="alt text" width="200px" height="350px">
-<img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/Screen4.jpg" alt="alt text" width="200px" height="350px">
-<img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/Screen5.jpg" alt="alt text" width="200px" height="350px">
-
-
-
-
-
-
+<img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/Screen4.png" alt="alt text" width="200px" height="350px">
+<img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/Screen5.png" alt="alt text" width="200px" height="350px">
 
 
 ###The results:
 
 After collecting all of the data, we found out that the most emotionally - charged space on campus was a given student's dorm room. Thus, the pins showed significant spaces all over campus - showing Vassar itself holds a special place in the students' hearts overall. In May 2016, an exhibit was created to display these results and show the Vassar community what spaces they thought were significant. 
 
-![alt](https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/display1.JPG)
+-> <img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/display1.JPG" alt="alt text" width="50%" height="50%"> <-
 
 
 ###Who worked on this?
