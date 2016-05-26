@@ -133,7 +133,7 @@
 				TargetAttributes = {
 					28388C5D1BE692C9004FC392 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = HFC52R7GR3;
+						DevelopmentTeam = 63H5SAKBK2;
 					};
 				};
 			};
@@ -395,7 +395,7 @@
 					"\"UIKit\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vcplusplus.vulnerable-spaces";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vcplusplus.vulnerable-spaces-kk";
 				PRODUCT_NAME = vulnerable_spaces;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "vulnerable_space/Vulnerable-Spaces-Bridging-Header.h";
@@ -415,7 +415,7 @@
 				INFOPLIST_FILE = vulnerable_space/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vcplusplus.vulnerable-spaces";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vcplusplus.vulnerable-spaces-kk";
 				PRODUCT_NAME = vulnerable_spaces;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "vulnerable_space/Vulnerable-Spaces-Bridging-Header.h";

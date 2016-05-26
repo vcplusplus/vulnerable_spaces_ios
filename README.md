@@ -9,6 +9,19 @@ Our Spaces is an iOS application that allows users to record locations on Vassar
 
 The data of "emotional moments," collected via this application, with regard to the campus and the surrounding Poughkeepsie area will be used to construct one or many visualized pieces demonstrating shared spaces of importance and vulnerability. In discovering these common spaces, the hope is to learn more about how we as Vassar students can communicate and connect with each other. Both the negative and the positive importances we share and the spaces we share need to be better understood. This data is a portion of Sarah King's thesis project entitled: "The Climate of Vulnerable Spaces." All data is anonymous, no names or personal data will be relayed or incorporated into the project. 
 
+###Screenshots:
+
+
+###The results:
+
+After collecting all of the data, we found out that the most emotionally - charged space on campus was a given student's dorm room. Thus, the pins showed significant spaces all over campus - showing Vassar itself holds a special place in the students' hearts overall.
+
+![myimage-alt-tag](images/display1.jpg)
+
+In May 2016, an exhibit was created to display these results and show the Vassar community what spaces they thought were significant. 
+
+![myimage-alt-tag](images/display1.jpg)
+
 
 ###Who worked on this?
 
