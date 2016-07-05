@@ -37,9 +37,9 @@ From May 13-23 in the former Vassar College bookstore, The Climate of Vulnerable
 </p>
 
 <p align="center">
-<img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/display3.jpg" alt="alt text" width="200px" height="350px">
-<img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/display4.jpg" alt="alt text" width="200px" height="350px">
-<img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/display5.jpg" alt="alt text" width="200px" height="350px">
+<img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/display3.jpeg" alt="alt text" width="25%">
+<img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/display4.jpeg" alt="alt text" width="25%">
+<img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/display5.jpeg" alt="alt text" width="25%">
 
 </p>
 
