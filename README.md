@@ -5,14 +5,14 @@
 
 
 
-###What is this app?
+### What is this app?
 
 Our Spaces (known in development as Vulnerable Spaces) is an iOS application created to help environmental studies major, Sarah King gather data for her senior thesis. The application allows users to record locations on Vassar campus that they feel are significant to them. The app presents a Google Maps view, where users can submit their current location or scroll around the map to submit a different location on Vassar's campus. Our Spaces also uses Location Services so that the map moves dynamically with the student. When a user submits a location, the program associates a randomly generated ID with the user and the location, the userID, and the time submitted are saved on a server using Parse. Parse is closing in January 2017, but as the app has already served its purpose there are no plans to update it.
 
 
 
 
-###Screenshots:
+### Screenshots:
 
 <p align="center">
 <img src="https://github.com/vcplusplus/vulnerable_spaces_ios/blob/master/images/Instruction1.png" alt="alt text" width="200px" height="350px">
@@ -28,7 +28,7 @@ Our Spaces (known in development as Vulnerable Spaces) is an iOS application cre
 </p>
 
 
-###How was the data used?
+### How was the data used?
 From May 13-23 in the former Vassar College bookstore, The Climate of Vulnerable Spaces exhibition presented the pieced and sewn Narrative Bodies Quilt on a dorm-room bed with large scale prints of maps displaying the data collected from the application. These images, the quilt and the space itself each offer various dimensions to the story of Vassar. Each mode of vulnerability exposed within a narrative built for and by the student body. Post-it notes and pens enabled those experiencing the exhibit to share what narratives being in the exhibit prompted.    
 **- paraphrased from Sarah King's thesis which can be read in its entirety [here](https://drive.google.com/a/vassar.edu/file/d/0B_ufrkcJcTNVZTU2eVhFSTA3YkE/view)**
 
@@ -44,7 +44,7 @@ From May 13-23 in the former Vassar College bookstore, The Climate of Vulnerable
 </p>
 
 
-###Who worked on this?
+### Who worked on this?
 [Gabriel Dell'Accio](https://github.com/GDell): Gabe worked on the backend, helping to setup the location data model and integrate the app with Parse. All while learning Swift and iOS development for the first time.
 
 [Kathryn Hodge](https://github.com/blondiebytes):
